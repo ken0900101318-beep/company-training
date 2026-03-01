@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>遊戲家資訊科技 - 新人教育訓練</title>
+    <title>遊戲家資訊科技 - 新人教育訓練（完整版）</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/serif.css">
     <style>
@@ -127,6 +127,19 @@
             font-size: 1.2em;
         }
 
+        .info-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box strong {
+            color: #0c5460;
+            font-size: 1.2em;
+        }
+
         /* 團隊成員卡片 */
         .team-grid {
             display: grid;
@@ -230,74 +243,38 @@
             opacity: 0.9;
         }
 
-        /* 圖標樣式 */
-        .icon-list {
-            list-style: none;
-            padding-left: 0;
+        /* 表格樣式 */
+        .reveal table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            font-size: 0.85em;
         }
 
-        .icon-list li {
-            position: relative;
-            padding-left: 40px;
-            margin: 15px 0;
-        }
-
-        .icon-list li::before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 1.5em;
-        }
-
-        .icon-list li.check::before {
-            content: "✅";
-        }
-
-        .icon-list li.star::before {
-            content: "⭐";
-        }
-
-        .icon-list li.rocket::before {
-            content: "🚀";
-        }
-
-        .icon-list li.warning::before {
-            content: "⚠️";
-        }
-
-        .icon-list li.target::before {
-            content: "🎯";
-        }
-
-        .icon-list li.calendar::before {
-            content: "📅";
-        }
-
-        .icon-list li.tool::before {
-            content: "🔧";
-        }
-
-        .icon-list li.growth::before {
-            content: "📈";
-        }
-
-        /* 按鈕樣式 */
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
+        .reveal table th {
             background: var(--secondary-color);
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            padding: 12px 8px;
+            text-align: left;
             font-weight: bold;
-            transition: all 0.3s;
-            margin: 10px 5px;
         }
 
-        .btn:hover {
-            background: #1f8a8f;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .reveal table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .reveal table tr:hover {
+            background: #f5f5f5;
+        }
+
+        /* 待填寫標記 */
+        .todo {
+            background: #fff3cd;
+            padding: 2px 8px;
+            border-radius: 3px;
+            color: #856404;
+            font-weight: bold;
         }
 
         /* 響應式設計 */
@@ -319,8 +296,8 @@
             <section class="cover-slide">
                 <h1>歡迎加入</h1>
                 <div class="subtitle">遊戲家資訊科技有限公司</div>
-                <p class="welcome-text">新人教育訓練</p>
-                <p style="margin-top: 2em; color: #888;">按 → 鍵開始</p>
+                <p class="welcome-text">新人教育訓練（完整版）</p>
+                <p style="margin-top: 2em; color: #888;">按 → 鍵開始 | 按 ESC 查看總覽</p>
             </section>
 
             <!-- 2. 公司概況 -->
@@ -341,11 +318,11 @@
                     </div>
                 </div>
                 <h3 style="margin-top: 40px;">ONE桌遊 - 自助桌遊館品牌</h3>
-                <ul class="icon-list">
-                    <li class="check">全台最大自助麻將桌遊連鎖品牌</li>
-                    <li class="check">AI 智能管理系統（門鎖、監控、繳費）</li>
-                    <li class="check">24小時無人營運模式</li>
-                    <li class="check">子品牌「智摸科技」- 麻將自助系統</li>
+                <ul style="font-size: 0.95em; line-height: 1.8;">
+                    <li>✅ 全台最大自助麻將桌遊連鎖品牌</li>
+                    <li>✅ AI 智能管理系統（門鎖、監控、繳費）</li>
+                    <li>✅ 24小時無人營運模式</li>
+                    <li>✅ 子品牌「智摸科技」- 麻將自助系統</li>
                 </ul>
             </section>
 
@@ -426,17 +403,17 @@
                 <h2>🤖 AI 時代的轉型思維</h2>
                 <div class="highlight-box">
                     <h3>當前時代背景</h3>
-                    <ul>
+                    <ul style="font-size: 0.95em;">
                         <li>我們正邁入 <strong>AI 時代</strong>（2-3 年轉型期）</li>
                         <li>工具變化快，輔助能力強</li>
                         <li>效率提升的速度遠超過去</li>
                     </ul>
                 </div>
                 <h3 style="margin-top: 30px;">必須習慣的改變</h3>
-                <ul class="icon-list">
-                    <li class="rocket">讓工具來協助工作，而非全靠人工</li>
-                    <li class="rocket">從「我來做」轉變為「我來管理工具做」</li>
-                    <li class="rocket">工作效率可以是過去的 10 倍甚至更多</li>
+                <ul style="font-size: 0.95em; line-height: 1.8;">
+                    <li>🚀 讓工具來協助工作，而非全靠人工</li>
+                    <li>🚀 從「我來做」轉變為「我來管理工具做」</li>
+                    <li>🚀 工作效率可以是過去的 10 倍甚至更多</li>
                 </ul>
             </section>
 
@@ -456,10 +433,10 @@
                         <strong>不改革，就會被改革淘汰</strong>
                     </p>
                 </div>
-                <ul class="icon-list" style="margin-top: 30px;">
-                    <li class="star">會用 AI 的人 > 不會用 AI 的人</li>
-                    <li class="star">主動學習工具 > 固守舊方法</li>
-                    <li class="star">擁抱變化 > 抗拒變化</li>
+                <ul style="font-size: 0.95em; line-height: 1.8; margin-top: 30px;">
+                    <li>⭐ 會用 AI 的人 > 不會用 AI 的人</li>
+                    <li>⭐ 主動學習工具 > 固守舊方法</li>
+                    <li>⭐ 擁抱變化 > 抗拒變化</li>
                 </ul>
             </section>
 
@@ -468,7 +445,7 @@
                 <h2>🚀 公司發展階段</h2>
                 <div class="highlight-box">
                     <h3>我們正處於快速發展期</h3>
-                    <ul style="font-size: 1.1em; line-height: 2;">
+                    <ul style="font-size: 0.95em; line-height: 2;">
                         <li>從 1 家店 → 105 家店（不到 3 年）</li>
                         <li>從無人概念 → AI 智能管理</li>
                         <li>從單一品牌 → 多品牌布局（智摸科技）</li>
@@ -476,11 +453,11 @@
                     </ul>
                 </div>
                 <h3 style="margin-top: 30px;">我們需要什麼樣的夥伴？</h3>
-                <ul class="icon-list">
-                    <li class="rocket">願意<strong>共同衝刺</strong>的夥伴</li>
-                    <li class="rocket">能<strong>快速適應變化</strong>的員工</li>
-                    <li class="rocket">有<strong>主動學習</strong>精神的人</li>
-                    <li class="rocket">能<strong>駕馭工具</strong>創造價值的人才</li>
+                <ul style="font-size: 0.95em; line-height: 1.8;">
+                    <li>🚀 願意<strong>共同衝刺</strong>的夥伴</li>
+                    <li>🚀 能<strong>快速適應變化</strong>的員工</li>
+                    <li>🚀 有<strong>主動學習</strong>精神的人</li>
+                    <li>🚀 能<strong>駕馭工具</strong>創造價值的人才</li>
                 </ul>
             </section>
 
@@ -494,14 +471,14 @@
                     </p>
                 </div>
                 <h3 style="margin-top: 30px;">在 AI 時代，這些是基本能力</h3>
-                <ul class="icon-list">
-                    <li class="check"><strong>統整能力</strong> - 整理資訊、歸納重點</li>
-                    <li class="check"><strong>資料收集</strong> - 搜尋、彙整、分析</li>
-                    <li class="check">AI 工具可以做<strong>很完整的協助</strong></li>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>✅ <strong>統整能力</strong> - 整理資訊、歸納重點</li>
+                    <li>✅ <strong>資料收集</strong> - 搜尋、彙整、分析</li>
+                    <li>✅ AI 工具可以做<strong>很完整的協助</strong></li>
                 </ul>
                 <div class="highlight-box" style="margin-top: 30px;">
                     <h3>我們需要的是什麼人？</h3>
-                    <ul style="font-size: 1.1em; line-height: 2;">
+                    <ul style="font-size: 0.95em; line-height: 2;">
                         <li>✅ 會<strong>思考</strong>的人</li>
                         <li>✅ 會<strong>整理</strong>的人</li>
                         <li>✅ 會<strong>主動嘗試</strong>的人</li>
@@ -513,21 +490,21 @@
             <section>
                 <h2>📋 正確的工作態度</h2>
                 <h3>收到任務後，你應該：</h3>
-                <ul class="icon-list" style="font-size: 1.1em;">
-                    <li class="target">先<strong>簡單彙整任務</strong>（用工具協助）</li>
-                    <li class="target">整理出<strong>初步結果</strong>（可以不完美）</li>
-                    <li class="target">開會時<strong>討論與調整</strong></li>
+                <ul style="font-size: 0.95em; line-height: 1.8;">
+                    <li>🎯 先<strong>簡單彙整任務</strong>（用工具協助）</li>
+                    <li>🎯 整理出<strong>初步結果</strong>（可以不完美）</li>
+                    <li>🎯 開會時<strong>討論與調整</strong></li>
                 </ul>
                 <div class="highlight-box" style="margin-top: 40px;">
                     <h3>可以接受的情況</h3>
-                    <ul style="line-height: 2;">
+                    <ul style="line-height: 1.8; font-size: 0.9em;">
                         <li>✅ 結果不盡理想 - <strong>沒關係</strong>，可以調整</li>
                         <li>✅ 判斷有些不同 - <strong>沒關係</strong>，可以討論</li>
                     </ul>
                     <h3 style="margin-top: 20px; border-top: 2px solid rgba(255,255,255,0.3); padding-top: 20px;">
                         無法接受的情況
                     </h3>
-                    <ul style="line-height: 2;">
+                    <ul style="line-height: 1.8; font-size: 0.9em;">
                         <li>❌ 完全沒嘗試就說「我不會」</li>
                         <li>❌ 不思考、不整理，等別人給答案</li>
                     </ul>
@@ -539,10 +516,10 @@
                 <h2>📅 工作節奏與溝通</h2>
                 <h3>每週例行會議</h3>
                 <div class="highlight-box">
-                    <p style="font-size: 1.5em; text-align: center; margin-bottom: 20px;">
+                    <p style="font-size: 1.3em; text-align: center; margin-bottom: 20px;">
                         <strong>每週二下午 2:00 - 週會議</strong>
                     </p>
-                    <ul style="font-size: 1.1em; line-height: 2;">
+                    <ul style="font-size: 0.95em; line-height: 2;">
                         <li>📊 整理<strong>一週的工作狀況</strong></li>
                         <li>📢 報告<strong>進度與問題</strong></li>
                         <li>💬 討論<strong>解決方案</strong></li>
@@ -550,49 +527,355 @@
                     </ul>
                 </div>
                 <h3 style="margin-top: 30px;">日常溝通方式</h3>
-                <ul class="icon-list">
-                    <li class="check">群組即時討論（快速決策）</li>
-                    <li class="check">重要事項即時宣布</li>
-                    <li class="warning"><strong>重要事項</strong>開會需<strong>再重複一次</strong></li>
-                    <li class="target">確保所有人都吸收到訊息</li>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>✅ 群組即時討論（快速決策）</li>
+                    <li>✅ 重要事項即時宣布</li>
+                    <li>⚠️ <strong>重要事項</strong>開會需<strong>再重複一次</strong></li>
+                    <li>🎯 確保所有人都吸收到訊息</li>
                 </ul>
             </section>
 
-            <!-- 11. 常用工具 -->
+            <!-- 11. 薪資福利制度 -->
             <section>
-                <h2>🔧 常用工具與系統</h2>
-                <h3>內部系統</h3>
-                <ul class="icon-list">
-                    <li class="tool"><strong>ONE桌遊管理系統</strong> - 店家管理、訂單、會員</li>
-                    <li class="tool"><strong>倉儲管理系統</strong> - 庫存、進出貨</li>
-                    <li class="tool"><strong>AI 客服系統</strong> - 自動回覆、問題分類</li>
-                    <li class="tool"><strong>打掃系統</strong> - 任務派發、進度追蹤</li>
+                <h2>💰 薪資福利制度</h2>
+                <div class="info-box">
+                    <strong>💡 待填寫內容</strong>
+                    <p style="margin-top: 10px;">請依實際情況填入具體數字與規定</p>
+                </div>
+                <h3>薪資結構</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>💵 底薪：<span class="todo">待填寫</span></li>
+                    <li>💵 績效獎金：<span class="todo">待填寫計算方式</span></li>
+                    <li>💵 年終獎金：<span class="todo">待填寫規則</span></li>
+                    <li>📅 發薪日：每月 <span class="todo">__</span> 號</li>
                 </ul>
-                <h3 style="margin-top: 30px;">AI 工具輔助</h3>
-                <ul class="icon-list">
-                    <li class="rocket"><strong>ChatGPT / Claude</strong> - 資料整理、文案撰寫</li>
-                    <li class="rocket"><strong>Google Workspace</strong> - 文件協作</li>
-                    <li class="rocket"><strong>LINE</strong> - 即時溝通</li>
-                    <li class="rocket"><strong>GitHub</strong> - 程式碼管理（技術團隊）</li>
+                <h3>保險福利</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>✅ 勞保、健保（到職日起算）</li>
+                    <li>✅ 團體保險：<span class="todo">待填寫</span></li>
                 </ul>
-                <p style="margin-top: 30px; color: #666; font-style: italic;">
-                    💡 善用工具，讓效率翻倍！
+                <h3>休假制度</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>🏖️ 特休：到職滿 <span class="todo">__</span> 個月後</li>
+                    <li>🏥 病假、事假：<span class="todo">待填寫規定</span></li>
+                    <li>📅 國定假日：依勞基法</li>
+                </ul>
+            </section>
+
+            <!-- 12. 請假與加班 -->
+            <section>
+                <h2>📝 請假與加班規定</h2>
+                <h3>請假流程</h3>
+                <ol style="font-size: 0.95em; line-height: 1.8;">
+                    <li>透過 <span class="todo">（系統/LINE/紙本）</span> 申請</li>
+                    <li>需提前 <span class="todo">__</span> 天（小時）</li>
+                    <li>由 <span class="todo">（直屬主管/Ken）</span> 批准</li>
+                    <li>緊急狀況請電話聯絡主管</li>
+                </ol>
+                <h3>加班規定</h3>
+                <ul style="font-size: 0.95em; line-height: 1.8;">
+                    <li>⏰ 加班費計算：<span class="todo">待填寫</span></li>
+                    <li>🔄 補休規則：<span class="todo">待填寫</span></li>
+                    <li>📋 加班需事前申請，主管同意後執行</li>
+                </ul>
+                <div class="warning-box" style="margin-top: 30px;">
+                    <strong>⚠️ 重要提醒</strong>
+                    <p style="margin-top: 10px;">
+                        週會（每週二下午 2:00）為固定會議<br>
+                        若無法參加需提前告知
+                    </p>
+                </div>
+            </section>
+
+            <!-- 13. 第一週工作計畫 -->
+            <section>
+                <h2>📆 第一週工作計畫</h2>
+                <h3>Day 1 - 報到日</h3>
+                <ul style="font-size: 0.85em; line-height: 1.6;">
+                    <li>09:00 - 報到、填寫資料</li>
+                    <li>10:00 - 辦公環境介紹</li>
+                    <li>11:00 - 系統帳號開通</li>
+                    <li>14:00 - 新人簡報講解（本簡報）</li>
+                    <li>16:00 - 認識團隊成員</li>
+                </ul>
+                <h3>Day 2-3 - 熟悉階段</h3>
+                <ul style="font-size: 0.85em; line-height: 1.6;">
+                    <li>系統操作教學</li>
+                    <li>跟著前輩觀察工作流程</li>
+                    <li>閱讀 SOP 文件</li>
+                    <li>提出疑問、記錄重點</li>
+                </ul>
+                <h3>Day 4-5 - 實作階段</h3>
+                <ul style="font-size: 0.85em; line-height: 1.6;">
+                    <li>開始簡單任務（有人帶著做）</li>
+                    <li>實際操作系統</li>
+                    <li>第一週回顧會議</li>
+                </ul>
+            </section>
+
+            <!-- 14. 各職位職責與 KPI -->
+            <section>
+                <h2>🎯 各職位職責與 KPI</h2>
+                <h3>業務（小圓）</h3>
+                <table>
+                    <tr>
+                        <th>日常工作</th>
+                        <th>KPI 指標</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            • 加盟諮詢接待<br>
+                            • 店家裝潢監工<br>
+                            • 材料訂購追蹤<br>
+                            • 客戶關係維護
+                        </td>
+                        <td>
+                            • 每月新簽約店數<br>
+                            • 裝潢準時完工率<br>
+                            • 客戶滿意度<br>
+                            • <span class="todo">待補充</span>
+                        </td>
+                    </tr>
+                </table>
+                <h3 style="margin-top: 20px;">會計（小兔）</h3>
+                <table>
+                    <tr>
+                        <th>日常工作</th>
+                        <th>KPI 指標</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            • 帳務處理<br>
+                            • 報表製作<br>
+                            • 發票開立<br>
+                            • 薪資計算
+                        </td>
+                        <td>
+                            • 帳務正確率<br>
+                            • 報表準時繳交<br>
+                            • <span class="todo">待補充</span>
+                        </td>
+                    </tr>
+                </table>
+                <p style="margin-top: 20px; font-size: 0.85em; color: #666;">
+                    💡 具體 KPI 數字與考核標準將由主管說明
                 </p>
             </section>
 
-            <!-- 12. 成長機會 -->
+            <!-- 15. 系統操作教學 -->
+            <section>
+                <h2>🔧 系統操作教學</h2>
+                <h3>內部系統</h3>
+                <ul style="font-size: 0.85em; line-height: 1.6;">
+                    <li>🏪 <strong>ONE桌遊管理系統</strong> - 店家管理、訂單、會員</li>
+                    <li>📦 <strong>倉儲管理系統</strong> - 庫存、進出貨</li>
+                    <li>🤖 <strong>AI 客服系統</strong> - 自動回覆、問題分類</li>
+                    <li>🧹 <strong>打掃系統</strong> - 任務派發、進度追蹤</li>
+                </ul>
+                <h3>AI 工具輔助</h3>
+                <ul style="font-size: 0.85em; line-height: 1.6;">
+                    <li>💬 <strong>ChatGPT / Claude</strong> - 資料整理、文案撰寫</li>
+                    <li>📄 <strong>Google Workspace</strong> - 文件協作</li>
+                    <li>📱 <strong>LINE</strong> - 即時溝通</li>
+                    <li>💻 <strong>GitHub</strong> - 程式碼管理（技術團隊）</li>
+                </ul>
+                <div class="info-box" style="margin-top: 20px;">
+                    <strong>💡 系統登入資訊</strong>
+                    <p style="margin-top: 10px;">
+                        帳號密碼由 <span class="todo">（IT/主管）</span> 提供<br>
+                        操作手冊請參考 <span class="todo">（Google Drive 連結）</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- 16. 緊急處理流程 -->
+            <section>
+                <h2>🚨 緊急處理流程</h2>
+                <h3>店家緊急狀況</h3>
+                <table style="font-size: 0.75em;">
+                    <tr>
+                        <th>狀況</th>
+                        <th>處理流程</th>
+                        <th>聯絡人</th>
+                    </tr>
+                    <tr>
+                        <td>門鎖故障<br>（客戶鎖在裡面）</td>
+                        <td>1. 安撫客戶<br>2. 遠端嘗試開鎖<br>3. 通知業務到場</td>
+                        <td><span class="todo">業務電話</span></td>
+                    </tr>
+                    <tr>
+                        <td>設備故障<br>（麻將桌、冷氣）</td>
+                        <td>1. 記錄問題<br>2. 通知業務<br>3. 派工維修</td>
+                        <td><span class="todo">業務電話</span></td>
+                    </tr>
+                    <tr>
+                        <td>客訴處理<br>（鄰居噪音等）</td>
+                        <td>1. 了解情況<br>2. 安撫客戶<br>3. 通報主管</td>
+                        <td><span class="todo">主管電話</span></td>
+                    </tr>
+                    <tr>
+                        <td>系統當機</td>
+                        <td>1. 確認範圍<br>2. 通知技術<br>3. 暫用備案</td>
+                        <td><span class="todo">技術電話</span></td>
+                    </tr>
+                </table>
+                <div class="warning-box" style="margin-top: 20px;">
+                    <strong>⚠️ 緊急聯絡人</strong>
+                    <p style="margin-top: 10px; line-height: 1.8;">
+                        Ken（總經理）- <span class="todo">0912-XXX-XXX</span><br>
+                        建佑（負責人）- <span class="todo">0912-XXX-XXX</span><br>
+                        小圓（業務）- <span class="todo">0912-XXX-XXX</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- 17. 常見問題 FAQ -->
+            <section>
+                <h2>❓ 常見問題 FAQ</h2>
+                <h3>關於工作</h3>
+                <ul style="font-size: 0.8em; line-height: 1.6;">
+                    <li><strong>Q: 忘記打卡怎麼辦？</strong><br>
+                        A: <span class="todo">待填寫流程</span></li>
+                    <li><strong>Q: 臨時請假要找誰？</strong><br>
+                        A: 先告知直屬主管，再填寫請假單</li>
+                    <li><strong>Q: 系統登不進去找誰？</strong><br>
+                        A: <span class="todo">IT 支援聯絡方式</span></li>
+                    <li><strong>Q: 週會沒空參加怎麼辦？</strong><br>
+                        A: 需提前告知 Ken，並事後補看會議記錄</li>
+                </ul>
+                <h3>關於公司</h3>
+                <ul style="font-size: 0.8em; line-height: 1.6;">
+                    <li><strong>Q: 午餐公司有提供嗎？</strong><br>
+                        A: <span class="todo">待填寫</span></li>
+                    <li><strong>Q: 停車位在哪？</strong><br>
+                        A: <span class="todo">待填寫位置</span></li>
+                    <li><strong>Q: 可以在家工作嗎？</strong><br>
+                        A: <span class="todo">待填寫遠端政策</span></li>
+                    <li><strong>Q: 多久會調薪？</strong><br>
+                        A: <span class="todo">待填寫考核週期</span></li>
+                </ul>
+            </section>
+
+            <!-- 18. 成功/失敗案例 -->
+            <section>
+                <h2>📚 成功/失敗案例分享</h2>
+                <h3>✅ 成功案例：善用 AI 工具</h3>
+                <div class="highlight-box">
+                    <p style="font-size: 0.9em; line-height: 1.8;">
+                        <strong>情境：</strong>整理 100 家店的營收報表<br>
+                        <strong>傳統做法：</strong>手動 Excel，需要 7 天<br>
+                        <strong>AI 做法：</strong>用 Claude 寫腳本，3 天完成<br>
+                        <strong>學到：</strong>善用工具可大幅提升效率
+                    </p>
+                </div>
+                <h3 style="margin-top: 20px;">✅ 成功案例：主動發現問題</h3>
+                <div class="highlight-box">
+                    <p style="font-size: 0.9em; line-height: 1.8;">
+                        <strong>情境：</strong>發現某供應商報價異常<br>
+                        <strong>做法：</strong>主動比價、提出質疑<br>
+                        <strong>結果：</strong>省下 50 萬成本<br>
+                        <strong>學到：</strong>要有「老闆思維」
+                    </p>
+                </div>
+                <h3 style="margin-top: 20px;">❌ 失敗案例：說「我不會」</h3>
+                <div class="warning-box">
+                    <p style="font-size: 0.9em; line-height: 1.8;">
+                        <strong>情境：</strong>收到任務直接說不會，等主管教<br>
+                        <strong>結果：</strong>錯過截止日，影響整個專案<br>
+                        <strong>教訓：</strong>先嘗試用 AI/Google 找答案
+                    </p>
+                </div>
+            </section>
+
+            <!-- 19. 公司願景與目標 -->
+            <section>
+                <h2>🌟 公司願景與目標</h2>
+                <h3>短期目標（1 年內）</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>📈 拓展到 150 家店</li>
+                    <li>🤖 AI 客服系統全面導入</li>
+                    <li>🎯 開發新產品線（除了麻將桌遊）</li>
+                </ul>
+                <h3>中期目標（3 年內）</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>🏆 成為全台最大自助娛樂品牌</li>
+                    <li>🌏 進軍海外市場（香港、新加坡）</li>
+                    <li>🎓 建立加盟主培訓學院</li>
+                </ul>
+                <h3>長期願景（5 年+）</h3>
+                <div class="highlight-box">
+                    <p style="font-size: 1em; line-height: 2;">
+                        ✨ 重新定義休閒娛樂產業<br>
+                        ✨ AI 驅動的無人營運標準<br>
+                        ✨ 成為產業標竿
+                    </p>
+                </div>
+            </section>
+
+            <!-- 20. 保密與資訊安全 -->
+            <section>
+                <h2>🔒 保密與資訊安全</h2>
+                <h3>保密協議</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>🔐 客戶資料不外流</li>
+                    <li>🔐 營收數據不公開</li>
+                    <li>🔐 AI 系統程式碼不外傳</li>
+                    <li>🔐 內部溝通記錄不截圖外傳</li>
+                </ul>
+                <h3>資訊安全規範</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>🔑 密碼設定：至少 12 字元，含英數符號</li>
+                    <li>🔑 禁止共用帳號</li>
+                    <li>🔑 離職時交還所有資料與權限</li>
+                    <li>🔑 LINE 群組截圖禁止外傳</li>
+                </ul>
+                <div class="warning-box" style="margin-top: 20px;">
+                    <strong>⚠️ 違規後果</strong>
+                    <p style="margin-top: 10px;">
+                        第一次：書面警告<br>
+                        第二次：記過處分<br>
+                        嚴重違規：立即解雇 + 法律追訴
+                    </p>
+                </div>
+            </section>
+
+            <!-- 21. 辦公室實務資訊 -->
+            <section>
+                <h2>🏢 辦公室實務資訊</h2>
+                <h3>上下班時間</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>⏰ 正常工時：<span class="todo">9:00-18:00（待確認）</span></li>
+                    <li>⏰ 彈性工時：<span class="todo">待填寫</span></li>
+                    <li>🍱 午休時間：<span class="todo">12:00-13:00（待確認）</span></li>
+                </ul>
+                <h3>辦公地點</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>📍 地址：<span class="todo">待填寫完整地址</span></li>
+                    <li>🚗 停車資訊：<span class="todo">待填寫</span></li>
+                    <li>🔑 門禁卡取得：<span class="todo">待填寫流程</span></li>
+                </ul>
+                <h3>辦公環境</h3>
+                <ul style="font-size: 0.9em; line-height: 1.8;">
+                    <li>☕ 茶水間：<span class="todo">位置</span></li>
+                    <li>🚻 洗手間：<span class="todo">位置</span></li>
+                    <li>💻 會議室使用：<span class="todo">預約方式</span></li>
+                    <li>♻️ 垃圾分類：<span class="todo">規則</span></li>
+                </ul>
+            </section>
+
+            <!-- 22. 職涯發展 -->
             <section>
                 <h2>📈 職涯發展與成長機會</h2>
                 <h3>公司處於快速發展期，機會很多</h3>
-                <ul class="icon-list" style="font-size: 1.1em;">
-                    <li class="growth">從 <strong>執行</strong> → <strong>管理</strong></li>
-                    <li class="growth">從 <strong>單一職能</strong> → <strong>跨領域</strong></li>
-                    <li class="growth">從 <strong>傳統工作</strong> → <strong>AI 協作</strong></li>
-                    <li class="growth">從 <strong>員工</strong> → <strong>核心夥伴</strong></li>
+                <ul style="font-size: 0.95em; line-height: 1.8;">
+                    <li>📊 從 <strong>執行</strong> → <strong>管理</strong></li>
+                    <li>📊 從 <strong>單一職能</strong> → <strong>跨領域</strong></li>
+                    <li>📊 從 <strong>傳統工作</strong> → <strong>AI 協作</strong></li>
+                    <li>📊 從 <strong>員工</strong> → <strong>核心夥伴</strong></li>
                 </ul>
                 <div class="highlight-box" style="margin-top: 40px;">
                     <h3>你將學到</h3>
-                    <ul style="line-height: 2;">
+                    <ul style="line-height: 2; font-size: 0.95em;">
                         <li>🎯 AI 時代的工作方法</li>
                         <li>🎯 快速成長企業的營運模式</li>
                         <li>🎯 多系統整合的實戰經驗</li>
@@ -601,7 +884,7 @@
                 </div>
             </section>
 
-            <!-- 13. 公司文化 -->
+            <!-- 23. 公司文化 -->
             <section>
                 <h2>🌟 公司文化與價值觀</h2>
                 <div class="stats-grid">
@@ -622,19 +905,19 @@
                     </div>
                 </div>
                 <h3 style="margin-top: 40px;">我們相信</h3>
-                <ul class="icon-list" style="font-size: 1.1em;">
-                    <li class="star">工具比經驗重要（AI 時代）</li>
-                    <li class="star">思考比執行重要（會思考才能駕馭工具）</li>
-                    <li class="star">速度比完美重要（快速迭代）</li>
-                    <li class="star">成長比穩定重要（發展期的選擇）</li>
+                <ul style="font-size: 0.95em; line-height: 1.8;">
+                    <li>⭐ 工具比經驗重要（AI 時代）</li>
+                    <li>⭐ 思考比執行重要（會思考才能駕馭工具）</li>
+                    <li>⭐ 速度比完美重要（快速迭代）</li>
+                    <li>⭐ 成長比穩定重要（發展期的選擇）</li>
                 </ul>
             </section>
 
-            <!-- 14. 結語 -->
+            <!-- 24. 結語 -->
             <section class="cover-slide">
                 <h2 style="font-size: 2.5em; margin-bottom: 30px;">一起衝刺未來</h2>
                 <div class="highlight-box" style="max-width: 800px; margin: 0 auto;">
-                    <p style="font-size: 1.3em; line-height: 2; margin: 0;">
+                    <p style="font-size: 1.2em; line-height: 2; margin: 0;">
                         你選擇加入我們，代表你認同我們的理念<br><br>
                         這是一個<strong>快速成長的團隊</strong><br>
                         這是一個<strong>擁抱 AI 的時代</strong><br>
@@ -647,22 +930,25 @@
                 </p>
             </section>
 
-            <!-- 15. 聯絡資訊 -->
+            <!-- 25. 聯絡資訊 -->
             <section>
                 <h2>📞 聯絡資訊</h2>
                 <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-top: 30px;">
                     <h3>遊戲家資訊科技有限公司</h3>
-                    <p style="font-size: 1.1em; line-height: 2; margin-top: 20px;">
+                    <p style="font-size: 1em; line-height: 2; margin-top: 20px;">
                         <strong>品牌：</strong>ONE桌遊 / 智摸科技<br>
                         <strong>營運店家：</strong>105 家<br>
                         <strong>會員數：</strong>10萬+<br>
+                        <strong>地址：</strong><span class="todo">待填寫</span><br>
+                        <strong>電話：</strong><span class="todo">待填寫</span><br>
+                        <strong>Email：</strong><span class="todo">待填寫</span>
                     </p>
                     <p style="margin-top: 30px; color: #666;">
                         如有任何問題，歡迎隨時向直屬主管或 Ken（阿建）總經理詢問
                     </p>
                 </div>
                 <p style="text-align: center; margin-top: 40px; color: #999; font-size: 0.9em;">
-                    按 ESC 查看簡報總覽 | 按 F 進入全螢幕
+                    按 ESC 查看簡報總覽 | 按 F 進入全螢幕 | 按 S 演講者模式
                 </p>
             </section>
         </div>
